@@ -2,85 +2,106 @@
 <html lang="en">
 
 <head>
-    <title>Contact - Silver Tech</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<title>Contact | Silver Tech</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
-<!-- Logo -->
-<div style="text-align: center; margin-top: 20px;">
-  <img src="images/logo.png" alt="DeepClean Logo" width="150">
+<header class="site-header">
+
+<img
+src="images/logo.png"
+alt="Silver Tech Logo"
+class="logo">
+
+<nav class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="services.html">Services</a>
+
+<a href="about.html">About</a>
+
+<a href="shop/products.html">Shop</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="shop/cart.html"
+class="basket-btn">
+
+🛒 Basket
+
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Book a Friendly Visit</h1>
+
+<p>
+Need help with technology?
+
+Send us a message and our team will contact you.
+</p>
+
 </div>
-
-<!--  menu bar -->
-<div class="blue-bar">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<!-- Contact section -->
-<section class="container mt-5">
-
-  <h1 class="text-center mb-4">Book a friendly home visit today.</h1>
-
-  <div class="row justify-content-center">
-
-    <div class="col-md-6">
-
-      <!-- FORM  -->
-      <form class="p-4 bg-white shadow-sm rounded" onsubmit="return validateForm()">
-
-        <!-- Name -->
-        <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-control" id="name">
-        </div>
-
-        <!-- Phone -->
-        <div class="mb-3">
-          <label class="form-label">Phone</label>
-          <input type="text" class="form-control" id="phone">
-        </div>
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" id="email">
-        </div>
-
-        <!-- Message -->
-        <div class="mb-3">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" id="message"></textarea>
-        </div>
-
-        <!-- Button -->
-        <button type="submit" class="btn btn-custom w-100">
-          Send Message
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
 
 </section>
 
-<!-- Footer -->
-<footer style="text-align: center; margin-top: 50px;">
-  <p>&copy; 2026 Silver Tech </p>
+<form onsubmit="return validateForm()">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name">
+
+<input
+type="text"
+id="phone"
+placeholder="Phone Number">
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<textarea
+id="message"
+rows="5"
+placeholder="Tell us how we can help">
+</textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+<footer>
+
+<p>&copy; 2026 Silver Tech</p>
+
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 
 </body>
+
 </html>
