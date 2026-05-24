@@ -1,45 +1,36 @@
-var products = [
-    {
-        id: 1,
-        name: "Easy Smartphone",
-        description: "Simple smartphone designed for seniors.",
-        price: 299.99
-    },
-    {
-        id: 2,
-        name: "Senior Tablet",
-        description: "Large screen tablet with easy navigation.",
-        price: 249.99
-    },
-    {
-        id: 3,
-        name: "Emergency Smart Button",
-        description: "Quick emergency assistance device.",
-        price: 59.99
-    },
-    {
-        id: 4,
-        name: "Large Button Remote",
-        description: "Accessible remote control with large buttons.",
-        price: 35.99
-    }
-];
+var products = [];
 
 var productsContainer = document.getElementById("products-container");
 
-if (productsContainer) {
-    productsContainer.innerHTML = "";
+fetch("http://localhost:3000/api/products")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        products = data;
 
-    products.forEach(function(product) {
-        productsContainer.innerHTML += `
-            <div class="product-card">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <p class="price">€${product.price}</p>
-                <button onclick="addToCart(${product.id})">Add to Basket</button>
-            </div>
-        `;
+        displayProducts();
+    })
+    .catch(function(error) {
+        console.log("Error loading products:", error);
     });
+
+function displayProducts() {
+    if (productsContainer) {
+        productsContainer.innerHTML = "";
+
+        products.forEach(function(product) {
+            productsContainer.innerHTML += `
+                <div class="product-card">
+                    <img src="../images/${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="price">€${product.price}</p>
+                    <button onclick="addToCart(${product.id})">Add to Basket</button>
+                </div>
+            `;
+        });
+    }
 }
 
 function addToCart(productId) {

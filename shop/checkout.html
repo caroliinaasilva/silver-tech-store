@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Checkout | Silver Tech</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<img src="../images/logo.png" alt="Silver Tech Logo" class="logo">
+
+<nav class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../services.html">Services</a>
+<a href="../about.html">About</a>
+<a href="products.html">Shop</a>
+<a href="../contact.html">Contact</a>
+</nav>
+
+<a href="cart.html" class="basket-btn">🛒 Basket</a>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<h1>Checkout</h1>
+<p>Complete your details to place your order.</p>
+</div>
+</section>
+
+<form onsubmit="return placeOrder()">
+
+<input type="text" id="checkout-name" placeholder="Full Name">
+
+<input type="email" id="checkout-email" placeholder="Email Address">
+
+<input type="text" id="checkout-address" placeholder="Delivery Address">
+
+<input type="text" id="checkout-phone" placeholder="Phone Number">
+
+<button type="submit">Place Order</button>
+
+</form>
+
+<footer>
+<p>&copy; 2026 Silver Tech</p>
+</footer>
+
+<script src="../js/checkout.js"></script>
+
+</body>
+</html>

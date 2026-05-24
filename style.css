@@ -192,3 +192,28 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.basket-table {
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.basket-header,
+.basket-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.basket-header {
+  font-weight: bold;
+}
+
+.basket-total {
+  margin-top: 30px;
+  text-align: right;
+}
