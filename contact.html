@@ -2,106 +2,65 @@
 <html lang="en">
 
 <head>
-
-<title>Contact | Silver Tech</title>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet"
-href="style.css">
-
+  <title>Contact | Silver Tech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <img src="images/logo.png" alt="Silver Tech Logo" class="logo">
 
-<header class="site-header">
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="shop/products.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-<img
-src="images/logo.png"
-alt="Silver Tech Logo"
-class="logo">
+    <a href="shop/cart.html" class="basket-btn">Basket</a>
+  </header>
 
-<nav class="nav-links">
+  <section class="contact-section">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <h3>We'd love to hear from you.</h3>
+      <p>Have a question or would like to book a visit? Fill in the form below or contact us directly.</p>
 
-<a href="index.html">Home</a>
+      <div class="contact-item">
+        <i class="bi bi-telephone-fill"></i>
+        <span>089 123 4567</span>
+      </div>
 
-<a href="services.html">Services</a>
+      <div class="contact-item">
+        <i class="bi bi-envelope-fill"></i>
+        <span>info@silvertech.ie</span>
+      </div>
 
-<a href="about.html">About</a>
+      <div class="contact-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Dublin, Ireland</span>
+      </div>
+    </div>
 
-<a href="shop/products.html">Shop</a>
+    <form class="contact-form" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="phone" placeholder="Your Phone">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" rows="7" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+      <p id="successMessage"></p>
+    </form>
+  </section>
 
-<a href="contact.html">Contact</a>
+  <footer>
+    <p>&copy; 2026 Silver Tech</p>
+  </footer>
 
-</nav>
-
-<a href="shop/cart.html"
-class="basket-btn">
-
-🛒 Basket
-
-</a>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h1>Book a Friendly Visit</h1>
-
-<p>
-Need help with technology?
-
-Send us a message and our team will contact you.
-</p>
-
-</div>
-
-</section>
-
-<form onsubmit="return validateForm()">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name">
-
-<input
-type="text"
-id="phone"
-placeholder="Phone Number">
-
-<input
-type="email"
-id="email"
-placeholder="Email Address">
-
-<textarea
-id="message"
-rows="5"
-placeholder="Tell us how we can help">
-</textarea>
-
-<button type="submit">
-
-Send Message
-
-</button>
-
-</form>
-
-<footer>
-
-<p>&copy; 2026 Silver Tech</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,39 +1,72 @@
-// Function to validate the form
+// Function used to validate the contact form before submission
 function validateForm() {
-    // Get the form information fields
-    var name= document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var message = document.getElementById("message").value;
-    // validate name and check if name field is empty or not
-    if (name == "") {
-        alert("Please fill your name");
-        return false; //This will prevent form from submission
+    // Get values typed by the user and remove extra spaces
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    /*
+    Name validation:
+    The name field cannot be empty because the business
+    needs to know who is requesting support.
+    */
+    if (name === "") {
+        alert("Please fill in your name.");
+        return false;
     }
-// check if name contains numbers
-var namepattern = /^[A-Za-z\s]+$/;
-if (!namepattern.test(name)) {
-    alert("Name must contain only letters");
-    return false;// This will prevent form from submission
-}
-// check if phone contains numbers
-var phonePattern = /^[0-9]{9,10}$/;
+
+    /*
+    Name pattern:
+    This regular expression only accepts letters and spaces.
+    It prevents users from submitting names with numbers or symbols.
+    */
+    var namePattern = /^[A-Za-z\s]+$/;
+
+    if (!namePattern.test(name)) {
+        alert("Name must contain only letters.");
+        return false;
+    }
+
+    /*
+    Phone validation:
+    The phone number must contain 9 or 10 digits.
+    This keeps the contact information usable for follow-up.
+    */
+    var phonePattern = /^[0-9]{9,10}$/;
+
     if (!phonePattern.test(phone)) {
         alert("Phone number must be 9 or 10 digits.");
         return false;
     }
-//  validate email and check if email field is empty or not
-var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
-if (email == ""){
-    alert("enter your email here");
-    return false; // This will prevent form from submission
-}
-// validate message and check if message field is empty or not
-if (message == "") {
-    alert("Please enter your message");
-    return false; // This will prevent form from submission
-}
-// So once all of the form is ok then it must show that your form is submitted successfully
-alert("Form submitted succesfully! Thank you for the message");
-return true;
+
+    /*
+    Email validation:
+    This regular expression checks if the email follows
+    a normal email format before the form is accepted.
+    */
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+        alert("Please enter your email address.");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    /*
+    Message validation:
+    The message cannot be empty because the team needs
+    details about what kind of help the user needs.
+    */
+    if (message === "") {
+        alert("Please enter your message.");
+        return false;
+    }
+
+    alert("Form submitted successfully! Thank you for the message.");
+    return true;
 }
