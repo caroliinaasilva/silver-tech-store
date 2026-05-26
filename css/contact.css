@@ -1,0 +1,36 @@
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px 80px;
+    align-items: start;
+  }
+  
+  .contact-info h3 {
+    color: #3D6FB6;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    font-size: 20px;
+  }
+  
+  .contact-item i {
+    color: #3D6FB6;
+    font-size: 24px;
+  }
+  
+  .contact-form {
+    margin: 0;
+    max-width: none;
+  }
+  
+  #successMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #3D6FB6;
+  }

@@ -1,55 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
+function placeOrder() {
 
-<head>
-<title>Checkout | Silver Tech</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../style.css">
-</head>
+  // Retrieve values entered by the user in the checkout form
+  var name = document.getElementById("checkout-name").value.trim();
 
-<body>
+  var email = document.getElementById("checkout-email").value.trim();
 
-<header class="site-header">
-<img src="../images/logo.png" alt="Silver Tech Logo" class="logo">
+  var phone = document.getElementById("checkout-phone").value.trim();
 
-<nav class="nav-links">
-<a href="../index.html">Home</a>
-<a href="../services.html">Services</a>
-<a href="../about.html">About</a>
-<a href="products.html">Shop</a>
-<a href="../contact.html">Contact</a>
-</nav>
+  var address = document.getElementById("checkout-address").value.trim();
 
-<a href="cart.html" class="basket-btn">🛒 Basket</a>
-</header>
+  var eircode = document.getElementById("checkout-eircode").value.trim();
 
-<section class="hero">
-<div class="hero-text">
-<h1>Checkout</h1>
-<p>Complete your details to place your order.</p>
-</div>
-</section>
+  var card = document.getElementById("checkout-card").value.trim();
 
-<form onsubmit="return placeOrder()">
+  var expiry = document.getElementById("checkout-expiry").value.trim();
 
-<input type="text" id="checkout-name" placeholder="Full Name">
+  var cvv = document.getElementById("checkout-cvv").value.trim();
 
-<input type="email" id="checkout-email" placeholder="Email Address">
 
-<input type="text" id="checkout-address" placeholder="Delivery Address">
+  /*
+  This DOM element is updated dynamically
+  to display validation messages.
+  */
 
-<input type="text" id="checkout-phone" placeholder="Phone Number">
+  var orderMessage =
+  document.getElementById("orderMessage");
 
-<button type="submit">Place Order</button>
+  orderMessage.innerHTML = "";
 
-</form>
 
-<footer>
-<p>&copy; 2026 Silver Tech</p>
-</footer>
+  /*
+  Required field validation:
 
-<script src="../js/checkout.js"></script>
+  The checkout process should only continue
+  if all customer and payment fields are completed.
+  */
 
-</body>
-</html>
+  if(
+
+  name === "" ||
+
+  email === "" ||
+
+  phone === "" ||
+
+  address === "" ||
+
+  eircode === "" ||
+
+  card === "" ||
+
+  expiry === "" ||
+
+  cvv === ""
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Please complete all checkout fields.";
+
+  return false;
+
+  }
+
+
+  /*
+  Name validation:
+
+  Only letters and spaces are accepted
+  to prevent invalid names.
+  */
+
+  var namePattern =
+  /^[A-Za-z\s]+$/;
+
+  if(
+
+  !namePattern.test(name)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Name must contain only letters.";
+
+  return false;
+
+  }
+
+
+  /*
+  Email validation:
+
+  Checks if email follows
+  standard email format.
+  */
+
+  var emailPattern =
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if(
+
+  !emailPattern.test(email)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Please enter a valid email address.";
+
+  return false;
+
+  }
+
+
+  /*
+  Phone validation:
+
+  Allows only 9 or 10 digits.
+  */
+
+  var phonePattern =
+  /^[0-9]{9,10}$/;
+
+  if(
+
+  !phonePattern.test(phone)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Phone number must be 9 or 10 digits.";
+
+  return false;
+
+  }
+
+
+  /*
+  Card validation:
+
+  Simulates a payment card
+  using a simple 16 digit rule.
+  */
+
+  var cardPattern =
+  /^[0-9]{16}$/;
+
+  if(
+
+  !cardPattern.test(card)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Card number must contain 16 digits.";
+
+  return false;
+
+  }
+
+
+  /*
+  Expiry validation:
+
+  Requires MM/YY format.
+  Example: 08/27
+  */
+
+  var expiryPattern =
+  /^(0[1-9]|1[0-2])\/[0-9]{2}$/;
+
+  if(
+
+  !expiryPattern.test(expiry)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "Expiry date must follow MM/YY format.";
+
+  return false;
+
+  }
+
+
+  /*
+  CVV validation:
+
+  Requires exactly 3 digits.
+  */
+
+  var cvvPattern =
+  /^[0-9]{3}$/;
+
+  if(
+
+  !cvvPattern.test(cvv)
+
+  ){
+
+  orderMessage.innerHTML =
+
+  "CVV must contain 3 digits.";
+
+  return false;
+
+  }
+
+
+  /*
+  Successful checkout:
+
+  Basket data is removed from localStorage
+  to simulate order completion.
+  */
+
+  localStorage.removeItem("cart");
+
+
+  orderMessage.innerHTML =
+
+  "Order placed successfully! Thank you for shopping with Silver Tech.";
+
+  orderMessage.style.color =
+
+  "#3D6FB6";
+
+
+  return false;
+
+}

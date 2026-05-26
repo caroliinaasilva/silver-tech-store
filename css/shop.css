@@ -1,0 +1,116 @@
+.products-section {
+    padding: 40px 70px;
+  }
+  
+  .products-section h2 {
+    font-size: 36px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  
+  .product-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  
+  .product-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+  }
+  
+  .product-card h3 {
+    color: #080808;
+  }
+  
+  .price {
+    color: #3D6FB6;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .basket-table {
+    background: white;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  }
+  
+  .basket-header,
+  .basket-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 50px;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .basket-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .basket-product img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+  
+  .basket-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+  }
+  
+  .basket-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .checkout-intro {
+    padding: 50px 80px 10px;
+  }
+  
+  .checkout-intro h1 {
+    font-size: 46px;
+    margin-bottom: 5px;
+  }
+  
+  .checkout-intro p {
+    color: #3D6FB6;
+    font-weight: bold;
+  }
+  
+  .checkout-section {
+    padding: 30px 80px 60px;
+  }
+  
+  .checkout-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  
+  #orderMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #3D6FB6;
+  }

@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+    .site-header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+  
+    .nav-links {
+      text-align: center;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      margin: 8px;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 25px;
+    }
+  
+    .hero img {
+      width: 90%;
+    }
+  
+    .products-grid,
+    .services-grid,
+    .about-features {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-section,
+    .contact-section,
+    .checkout-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-section,
+    .contact-section,
+    .checkout-section,
+    .products-section {
+      padding: 30px;
+    }
+  
+    .basket-header {
+      display: none;
+    }
+  
+    .basket-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .basket-product {
+      justify-content: center;
+    }
+  
+    .basket-total {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .basket-buttons {
+      flex-direction: column;
+    }
+  
+    .page-intro {
+      padding: 40px 25px 20px;
+    }
+  
+    .page-intro h1 {
+      font-size: 38px;
+    }
+  }
