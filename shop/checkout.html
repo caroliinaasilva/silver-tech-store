@@ -5,13 +5,14 @@
   <title>Checkout | Silver Tech</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/services.css">
-<link rel="stylesheet" href="../css/about.css">
-<link rel="stylesheet" href="../css/contact.css">
-<link rel="stylesheet" href="../css/shop.css">
-<link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 <body>
@@ -27,40 +28,33 @@
       <a href="../contact.html">Contact</a>
     </nav>
 
-    <a href="cart.html" class="basket-btn">Basket</a>
+    <a href="cart.html" class="basket-btn">🛒 Basket</a>
   </header>
 
   <section class="page-intro">
     <h1>Checkout</h1>
-    <p>Secure and simple.</p>
+    <p>Complete your details to place your order.</p>
   </section>
 
   <section class="checkout-section">
-
     <form class="checkout-form" onsubmit="return placeOrder()">
 
       <div class="checkout-column">
         <h3>Customer Information</h3>
 
         <input type="text" id="checkout-name" placeholder="Full Name">
-
         <input type="email" id="checkout-email" placeholder="Email">
-
         <input type="text" id="checkout-phone" placeholder="Phone Number">
-
         <input type="text" id="checkout-address" placeholder="Address">
-
         <input type="text" id="checkout-eircode" placeholder="Eircode">
       </div>
 
       <div class="checkout-column">
-        <h3>Payment Information</h3>
+        <h3>Order Confirmation</h3>
 
-        <input type="text" id="checkout-card" placeholder="Card Number">
-
-        <input type="text" id="checkout-expiry" placeholder="Expiry Date MM / YY">
-
-        <input type="text" id="checkout-cvv" placeholder="CVV">
+        <p>
+          Please confirm your details before placing the order.
+        </p>
 
         <button type="submit">Place Order</button>
 
@@ -68,7 +62,6 @@
       </div>
 
     </form>
-
   </section>
 
   <footer>
