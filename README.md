@@ -4,24 +4,23 @@ Silver Tech is a website prototype designed to provide friendly technology suppo
 
 ## Features
 
-- Home page
-- Services page
-- About page
-- Contact form with validation
-- Shop page
-- Basket page
-- Checkout page
-- Product data loaded from MySQL
+* Home page
+* Services page
+* About page
+* Contact form with validation
+* Shop page
+* Basket page
+* Checkout page
+* Product data loaded from MySQL
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express
-- MySQL
-- Docker
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Express
+* MySQL
 
 ## Installation
 
@@ -31,7 +30,7 @@ Install dependencies:
 npm install
 ```
 
-Start server:
+Start the server:
 
 ```bash
 node server.js
@@ -43,16 +42,22 @@ Open in browser:
 http://localhost:3000
 ```
 
-## Database
+## Database Setup
 
-Create database:
+1. Open MySQL Workbench.
+2. Run the file `silvertech.sql`.
+3. Start the application using:
 
-```sql
-CREATE DATABASE silvertech;
+```bash
+node server.js
 ```
 
-Import the products table and run the application.
+4. Open:
+
+```text
+http://localhost:3000
+```
 
 ## Author
 
-Carolina Silva
+Carolina de Sousa Silva
